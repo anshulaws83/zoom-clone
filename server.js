@@ -41,7 +41,7 @@ io.on('connection', socket => {
         io.to(roomId).emit('createmessage', message)
         });
         socket.on('disconnect', () =>{
-            socket.to(roomId).broadcast.emit.apply('user-disconnected', userId)
+            socket.to(roomId).broadcast.emit('user-disconnected', userId)
         })
     })
 })
